@@ -1,6 +1,6 @@
 {
   "name": "prng",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Pseudo-Random number generator",
   "author": "Roman Vereshchagin",
   "license": "MIT",
@@ -9,10 +9,13 @@
   "scripts": {
     "prepublish": "npm run build",
     "build": "npm run lint && tsc",
-    "lint": "tslint -p ."
+    "lint": "tslint -p .",
+    "docs": "typedoc"
   },
   "devDependencies": {
     "tslint": "^6.1.2",
+    "typedoc": "^0.17.7",
+    "typedoc-plugin-markdown": "^2.2.17",
     "typescript": "^3.9.2"
   },
   "homepage": "https://www.sibvrv.com"
