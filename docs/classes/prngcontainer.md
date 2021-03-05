@@ -30,7 +30,7 @@ PRNG Container
 
 \+ **new PRNGContainer**(`seed`: number, `seedFunc`: [TSeedCallback](../README.md#tseedcallback)): *[PRNGContainer](prngcontainer.md)*
 
-*Defined in [index.ts:83](https://github.com/sibvrv/PRNG/blob/fc1cf27/src/index.ts#L83)*
+*Defined in [index.ts:83](https://github.com/sibvrv/PRNG/blob/60b083c/src/index.ts#L83)*
 
 PRNGContainer Constructor
 
@@ -49,7 +49,7 @@ Name | Type | Default | Description |
 
 • **items**: *object*
 
-*Defined in [index.ts:81](https://github.com/sibvrv/PRNG/blob/fc1cf27/src/index.ts#L81)*
+*Defined in [index.ts:81](https://github.com/sibvrv/PRNG/blob/60b083c/src/index.ts#L81)*
 
 #### Type declaration:
 
@@ -61,7 +61,7 @@ ___
 
 • **seed**: *number*
 
-*Defined in [index.ts:90](https://github.com/sibvrv/PRNG/blob/fc1cf27/src/index.ts#L90)*
+*Defined in [index.ts:90](https://github.com/sibvrv/PRNG/blob/60b083c/src/index.ts#L90)*
 
 Global Seed
 
@@ -71,7 +71,7 @@ ___
 
 • **seedFunc**: *[TSeedCallback](../README.md#tseedcallback)*
 
-*Defined in [index.ts:90](https://github.com/sibvrv/PRNG/blob/fc1cf27/src/index.ts#L90)*
+*Defined in [index.ts:90](https://github.com/sibvrv/PRNG/blob/60b083c/src/index.ts#L90)*
 
 Seed generator per instance
 
@@ -81,7 +81,7 @@ Seed generator per instance
 
 ▸ **getInstance**(`name`: string): *[PRNG](prng.md)‹›*
 
-*Defined in [index.ts:97](https://github.com/sibvrv/PRNG/blob/fc1cf27/src/index.ts#L97)*
+*Defined in [index.ts:97](https://github.com/sibvrv/PRNG/blob/60b083c/src/index.ts#L97)*
 
 Get PRNG instance by name
 

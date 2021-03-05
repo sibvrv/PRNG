@@ -11,8 +11,39 @@ var PRNG = /** @class */ (function () {
      * @param seed
      */
     function PRNG(seed) {
+        var _this = this;
         if (seed === void 0) { seed = 1; }
         this.seed = seed;
+        /**
+         * Seed From String
+         * @param data - Any string
+         * @return {number}
+         */
+        this.seedFromString = function (data) {
+            return _this.seed = PRNG.seedFromString(data);
+        };
+        /**
+         * Random Number [0, 1)
+         * @return {number}
+         */
+        this.random = function () {
+            return (_this.randomLong() / 2147483647);
+        };
+        /**
+         * Random Range [min, max)
+         * @param min
+         * @param max
+         * @return {number}
+         */
+        this.randomRange = function (min, max) {
+            return min + ((max - min) * _this.random());
+        };
+        /**
+         * Random Unsigned Int
+         */
+        this.randomLong = function () {
+            return _this.seed = (_this.seed * 16807) % 2147483647;
+        };
     }
     /**
      * Seed From String
@@ -30,36 +61,6 @@ var PRNG = /** @class */ (function () {
         }
         return (seed > 0 ? seed : (-seed + 2147483646)) % 2147483647 || 1;
     };
-    /**
-     * Seed From String
-     * @param data - Any string
-     * @return {number}
-     */
-    PRNG.prototype.seedFromString = function (data) {
-        return this.seed = PRNG.seedFromString(data);
-    };
-    /**
-     * Random Number [0, 1)
-     * @return {number}
-     */
-    PRNG.prototype.random = function () {
-        return (this.randomLong() / 2147483647);
-    };
-    /**
-     * Random Range [min, max)
-     * @param min
-     * @param max
-     * @return {number}
-     */
-    PRNG.prototype.randomRange = function (min, max) {
-        return min + ((max - min) * this.random());
-    };
-    /**
-     * Random Unsigned Int
-     */
-    PRNG.prototype.randomLong = function () {
-        return this.seed = (this.seed * 16807) % 2147483647;
-    };
     return PRNG;
 }());
 exports.PRNG = PRNG;
@@ -70,7 +71,8 @@ exports.PRNG = PRNG;
  * @param seed - Parent seed
  * @returns {number}
  */
-exports.defaultSeedCallback = function (name, seed) { return PRNG.seedFromString("" + name + seed + seed.toString(32)); };
+var defaultSeedCallback = function (name, seed) { return PRNG.seedFromString("" + name + seed + seed.toString(32)); };
+exports.defaultSeedCallback = defaultSeedCallback;
 /**
  * PRNG Container
  */

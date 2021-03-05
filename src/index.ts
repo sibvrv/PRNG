@@ -33,7 +33,7 @@ export class PRNG {
    * @param data - Any string
    * @return {number}
    */
-  public seedFromString(data: string) {
+  public seedFromString = (data: string) => {
     return this.seed = PRNG.seedFromString(data);
   }
 
@@ -41,7 +41,7 @@ export class PRNG {
    * Random Number [0, 1)
    * @return {number}
    */
-  public random() {
+  public random = () => {
     return (this.randomLong() / 2147483647);
   }
 
@@ -51,14 +51,14 @@ export class PRNG {
    * @param max
    * @return {number}
    */
-  public randomRange(min: number, max: number) {
+  public randomRange = (min: number, max: number) => {
     return min + ((max - min) * this.random());
   }
 
   /**
    * Random Unsigned Int
    */
-  public randomLong() {
+  public randomLong = () => {
     return this.seed = (this.seed * 16807) % 2147483647;
   }
 }

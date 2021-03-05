@@ -19,23 +19,23 @@ export declare class PRNG {
      * @param data - Any string
      * @return {number}
      */
-    seedFromString(data: string): number;
+    seedFromString: (data: string) => number;
     /**
      * Random Number [0, 1)
      * @return {number}
      */
-    random(): number;
+    random: () => number;
     /**
      * Random Range [min, max)
      * @param min
      * @param max
      * @return {number}
      */
-    randomRange(min: number, max: number): number;
+    randomRange: (min: number, max: number) => number;
     /**
      * Random Unsigned Int
      */
-    randomLong(): number;
+    randomLong: () => number;
 }
 export declare type TSeedCallback = (name: string, rootSeed: number) => number;
 /**

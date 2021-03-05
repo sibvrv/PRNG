@@ -21,7 +21,7 @@
 
 Ƭ **TSeedCallback**: *function*
 
-*Defined in [index.ts:66](https://github.com/sibvrv/PRNG/blob/fc1cf27/src/index.ts#L66)*
+*Defined in [index.ts:66](https://github.com/sibvrv/PRNG/blob/60b083c/src/index.ts#L66)*
 
 #### Type declaration:
 
@@ -40,7 +40,7 @@ Name | Type |
 
 ▸ **defaultSeedCallback**(`name`: string, `seed`: number): *number*
 
-*Defined in [index.ts:75](https://github.com/sibvrv/PRNG/blob/fc1cf27/src/index.ts#L75)*
+*Defined in [index.ts:75](https://github.com/sibvrv/PRNG/blob/60b083c/src/index.ts#L75)*
 
 Seed Initialization
 Default Callback
